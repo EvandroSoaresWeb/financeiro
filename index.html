@@ -1196,21 +1196,7 @@ function loadData() {
   if (stored) {
     transactions = JSON.parse(stored);
   } else {
-    // Demo data
-    const y = currentYear, m = currentMonth;
-    transactions = [
-      { id: 1, type:'income', desc:'Salário', category:'Salário', value:8500, date:`${y}-${String(m+1).padStart(2,'0')}-05`, payment:'TED', expType:'recorrente', person:'Empresa XYZ', status:'paid', subcat:'' },
-      { id: 2, type:'income', desc:'Freelance Site', category:'Freelance', value:2200, date:`${y}-${String(m+1).padStart(2,'0')}-12`, payment:'PIX', expType:'avista', person:'Cliente A', status:'paid', subcat:'' },
-      { id: 3, type:'expense', desc:'Aluguel', category:'Moradia', value:1800, date:`${y}-${String(m+1).padStart(2,'0')}-01`, payment:'TED', expType:'recorrente', person:'Imobiliária', status:'paid', subcat:'' },
-      { id: 4, type:'expense', desc:'Mercado', category:'Alimentação', value:620, date:`${y}-${String(m+1).padStart(2,'0')}-10`, payment:'Débito', expType:'avista', person:'Supermercado', status:'paid', subcat:'' },
-      { id: 5, type:'expense', desc:'Netflix', category:'Assinaturas', value:55.90, date:`${y}-${String(m+1).padStart(2,'0')}-15`, payment:'Crédito', expType:'recorrente', person:'Netflix', status:'paid', subcat:'' },
-      { id: 6, type:'expense', desc:'Academia', category:'Saúde', value:129, date:`${y}-${String(m+1).padStart(2,'0')}-01`, payment:'Débito', expType:'recorrente', person:'Smart Fit', status:'paid', subcat:'' },
-      { id: 7, type:'expense', desc:'Notebook (parcelado)', category:'Tecnologia', value:450, date:`${y}-${String(m+1).padStart(2,'0')}-20`, payment:'Crédito', expType:'parcelado', person:'Magazine Luiza', status:'paid', subcat:'', installCurrent:3, installTotal:12 },
-      { id: 8, type:'expense', desc:'Combustível', category:'Transporte', value:280, date:`${y}-${String(m+1).padStart(2,'0')}-18`, payment:'Débito', expType:'avista', person:'Posto', status:'paid', subcat:'' },
-      { id: 9, type:'expense', desc:'Luz', category:'Moradia', value:180, date:`${y}-${String(m+1).padStart(2,'0')}-25`, payment:'Boleto', expType:'avista', person:'Cemig', status:'pending', subcat:'' },
-      { id: 10, type:'expense', desc:'Internet', category:'Tecnologia', value:119, date:`${y}-${String(m+1).padStart(2,'0')}-28`, payment:'Boleto', expType:'recorrente', person:'Vivo', status:'pending', subcat:'' },
-      { id: 11, type:'income', desc:'Freelance App', category:'Freelance', value:3500, date:`${y}-${String(m+1).padStart(2,'0')}-28`, payment:'PIX', expType:'avista', person:'Cliente B', status:'pending', subcat:'' },
-    ];
+    transactions = [];
     saveData();
   }
 }
